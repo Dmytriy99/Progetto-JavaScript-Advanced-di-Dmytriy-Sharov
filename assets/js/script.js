@@ -4,6 +4,7 @@ const category = document.querySelector(".category");
 const input = document.querySelector("input");
 const score = document.querySelector(".score");
 const textScore = document.querySelector(".textScore");
+const btn = document.querySelector("button");
 let city;
 
 let clearCard = function () {
@@ -58,14 +59,23 @@ const errorHandler = (warningMessage) => {
   summary.innerHTML = `<p>${warningMessage}</p>`;
   return warningMessage;
 };
+const errorEmpty = () => {
+  if (!input.value) {
+    errorHandler(`<h1>YOU MUST WRITE A CITY<h1>`);
+    clearCard();
+  }
+};
 
 input.addEventListener("keydown", function (enterkey) {
   if (enterkey.key === "Enter") {
     city = formatCityName(input.value);
     getData();
-    if (!input.value) {
-      errorHandler(`<h1>YOU MUST WRITE A CITY<h1>`);
-      clearCard();
-    }
+    errorEmpty();
   }
+});
+
+btn.addEventListener("click", function () {
+  city = formatCityName(input.value);
+  getData();
+  errorEmpty();
 });
