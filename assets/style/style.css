@@ -9,11 +9,10 @@ body {
 }
 
 .image {
-  height: 40vh;
+  height: 42vh;
   width: 80%;
   object-fit: fill;
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
   align-items: center;
 }
