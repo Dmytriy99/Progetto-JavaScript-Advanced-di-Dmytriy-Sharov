@@ -1,7 +1,6 @@
 {
   "name": "progetto-javascript-advanced-di-dmytriy-sharov",
   "version": "1.0.0",
-  "description": "",
   "main": "webpack.config.js",
   "private": "true",
   "scripts": {
@@ -13,5 +12,6 @@
   "dependencies": {
     "webpack": "^5.88.1",
     "webpack-cli": "^5.1.4"
-  }
+  },
+  "description": ""
 }
