@@ -1,4 +1,5 @@
 import "/src/style/style.css";
+import "/src/image/favicon.png";
 
 const photo = document.querySelector(".image");
 const summary = document.querySelector(".summary");

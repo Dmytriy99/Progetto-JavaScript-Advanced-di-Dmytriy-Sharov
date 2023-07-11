@@ -10,14 +10,14 @@
           c = t(667),
           s = t.n(c),
           u = new URL(t(45), t.b),
-          l = i()(o()),
-          p = s()(u);
-        l.push([
+          p = i()(o()),
+          l = s()(u);
+        p.push([
           e.id,
-          `body {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  background-image: url(${p});\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n}\n\n.image {\n  height: 40vh;\n  width: 80%;\n  object-fit: fill;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n  align-items: center;\n  border-radius: 10px;\n}\n\np {\n  text-align: center;\n}\n\ninput {\n  margin-top: 50px;\n  width: 380px;\n  height: 60px;\n  font-size: 30px;\n  text-align: center;\n  border-radius: 10px;\n}\n\np {\n  background-color: lightgrey;\n  border-radius: 10px;\n}\n\n.textScore,\n.score {\n  background-color: lightgrey;\n  width: 200px;\n  text-align: center;\n  border-radius: 10px;\n}\n\n.category {\n  width: 300px;\n}\n\n.summary {\n  width: 90%;\n}\n\nbutton {\n  width: 100px;\n  height: 35px;\n  margin-top: 20px;\n  background-color: lightblue;\n  font-weight: bolder;\n  border-radius: 8px;\n}\n`,
+          `body {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  background-image: url(${l});\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n}\n\n.image {\n  height: 40vh;\n  width: 80%;\n  object-fit: fill;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n  align-items: center;\n  border-radius: 10px;\n}\n\np {\n  text-align: center;\n}\n\ninput {\n  margin-top: 50px;\n  width: 380px;\n  height: 60px;\n  font-size: 30px;\n  text-align: center;\n  border-radius: 10px;\n}\n\np {\n  background-color: lightgrey;\n  border-radius: 10px;\n}\n\n.textScore,\n.score {\n  background-color: lightgrey;\n  width: 200px;\n  text-align: center;\n  border-radius: 10px;\n}\n\n.category {\n  width: 300px;\n}\n\n.summary {\n  width: 90%;\n}\n\nbutton {\n  width: 100px;\n  height: 35px;\n  margin-top: 20px;\n  background-color: lightblue;\n  font-weight: bolder;\n  border-radius: 8px;\n}\n`,
           "",
         ]);
-        const d = l;
+        const d = p;
       },
       645: (e) => {
         e.exports = function (e) {
@@ -52,29 +52,29 @@
                   null != s && (i[s] = !0);
                 }
               for (var u = 0; u < e.length; u++) {
-                var l = [].concat(e[u]);
-                (r && i[l[0]]) ||
+                var p = [].concat(e[u]);
+                (r && i[p[0]]) ||
                   (void 0 !== a &&
-                    (void 0 === l[5] ||
-                      (l[1] = "@layer"
-                        .concat(l[5].length > 0 ? " ".concat(l[5]) : "", " {")
-                        .concat(l[1], "}")),
-                    (l[5] = a)),
+                    (void 0 === p[5] ||
+                      (p[1] = "@layer"
+                        .concat(p[5].length > 0 ? " ".concat(p[5]) : "", " {")
+                        .concat(p[1], "}")),
+                    (p[5] = a)),
                   t &&
-                    (l[2]
-                      ? ((l[1] = "@media "
-                          .concat(l[2], " {")
-                          .concat(l[1], "}")),
-                        (l[2] = t))
-                      : (l[2] = t)),
+                    (p[2]
+                      ? ((p[1] = "@media "
+                          .concat(p[2], " {")
+                          .concat(p[1], "}")),
+                        (p[2] = t))
+                      : (p[2] = t)),
                   o &&
-                    (l[4]
-                      ? ((l[1] = "@supports ("
-                          .concat(l[4], ") {")
-                          .concat(l[1], "}")),
-                        (l[4] = o))
-                      : (l[4] = "".concat(o))),
-                  n.push(l));
+                    (p[4]
+                      ? ((p[1] = "@supports ("
+                          .concat(p[4], ") {")
+                          .concat(p[1], "}")),
+                        (p[4] = o))
+                      : (p[4] = "".concat(o))),
+                  n.push(p));
               }
             }),
             n
@@ -118,10 +118,10 @@
           for (var a = {}, i = [], c = 0; c < e.length; c++) {
             var s = e[c],
               u = r.base ? s[0] + r.base : s[0],
-              l = a[u] || 0,
-              p = "".concat(u, " ").concat(l);
-            a[u] = l + 1;
-            var d = t(p),
+              p = a[u] || 0,
+              l = "".concat(u, " ").concat(p);
+            a[u] = p + 1;
+            var d = t(l),
               f = {
                 css: s[1],
                 media: s[2],
@@ -133,9 +133,9 @@
             else {
               var h = o(f, r);
               (r.byIndex = c),
-                n.splice(c, 0, { identifier: p, updater: h, references: 1 });
+                n.splice(c, 0, { identifier: l, updater: h, references: 1 });
             }
-            i.push(p);
+            i.push(l);
           }
           return i;
         }
@@ -167,8 +167,8 @@
               n[c].references--;
             }
             for (var s = r(e, o), u = 0; u < a.length; u++) {
-              var l = t(a[u]);
-              0 === n[l].references && (n[l].updater(), n.splice(l, 1));
+              var p = t(a[u]);
+              0 === n[p].references && (n[p].updater(), n.splice(p, 1));
             }
             a = s;
           };
@@ -263,7 +263,7 @@
         };
       },
       45: (e, n, t) => {
-        e.exports = t.p + "d926ca071005eab7874a.png";
+        e.exports = t.p + "city.png";
       },
     },
     n = {};
@@ -323,18 +323,19 @@
         c = t(565),
         s = t.n(c),
         u = t(216),
-        l = t.n(u),
-        p = t(589),
-        d = t.n(p),
+        p = t.n(u),
+        l = t(589),
+        d = t.n(l),
         f = t(982),
         h = {};
       (h.styleTagTransform = d()),
         (h.setAttributes = s()),
         (h.insert = i().bind(null, "head")),
         (h.domAPI = o()),
-        (h.insertStyleElement = l()),
+        (h.insertStyleElement = p()),
         n()(f.Z, h),
-        f.Z && f.Z.locals && f.Z.locals;
+        f.Z && f.Z.locals && f.Z.locals,
+        t.p;
       const g = document.querySelector(".image"),
         m = document.querySelector(".summary"),
         v = document.querySelector(".category"),
