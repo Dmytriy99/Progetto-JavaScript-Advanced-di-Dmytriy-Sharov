@@ -1,3 +1,5 @@
+import "/src/style/style.css";
+
 const photo = document.querySelector(".image");
 const summary = document.querySelector(".summary");
 const category = document.querySelector(".category");
