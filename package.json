@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
+  "private": "true",
   "scripts": {
     "build": "webpack"
   },
