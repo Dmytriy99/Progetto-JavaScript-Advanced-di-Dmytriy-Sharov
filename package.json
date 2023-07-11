@@ -1,5 +1,16 @@
 {
-  "devDependencies": {
-    "webpack": "^5.88.0"
+  "name": "progetto-javascript-advanced-di-dmytriy-sharov",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
   }
 }
