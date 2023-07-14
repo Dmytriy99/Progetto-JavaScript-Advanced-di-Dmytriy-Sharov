@@ -1,5 +1,5 @@
 const path = require("path");
-
+const WebpackFavicons = require("webpack-favicons");
 module.exports = {
   entry: "./src/index.js",
   output: {
@@ -18,4 +18,13 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new WebpackFavicons({
+      src: "/src/image/favicon.png",
+      path: "img",
+      icons: {
+        favicons: true,
+      },
+    }),
+  ],
 };
