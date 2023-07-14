@@ -1,7 +1,7 @@
 (() => {
   "use strict";
   var e = {
-      982: (e, n, t) => {
+      147: (e, n, t) => {
         t.d(n, { Z: () => d });
         var r = t(81),
           o = t.n(r),
@@ -9,7 +9,7 @@
           i = t.n(a),
           c = t(667),
           s = t.n(c),
-          u = new URL(t(45), t.b),
+          u = new URL(t(844), t.b),
           p = i()(o()),
           l = s()(u);
         p.push([
@@ -262,8 +262,8 @@
           }
         };
       },
-      45: (e, n, t) => {
-        e.exports = t.p + "../src/image/city.png";
+      844: (e, n, t) => {
+        e.exports = t.p + "../src/IMG/city.png";
       },
     },
     n = {};
@@ -326,7 +326,7 @@
         p = t.n(u),
         l = t(589),
         d = t.n(l),
-        f = t(982),
+        f = t(147),
         h = {};
       (h.styleTagTransform = d()),
         (h.setAttributes = s()),
@@ -334,8 +334,7 @@
         (h.domAPI = o()),
         (h.insertStyleElement = p()),
         n()(f.Z, h),
-        f.Z && f.Z.locals && f.Z.locals,
-        t.p;
+        f.Z && f.Z.locals && f.Z.locals;
       const g = document.querySelector(".image"),
         m = document.querySelector(".summary"),
         v = document.querySelector(".category"),
