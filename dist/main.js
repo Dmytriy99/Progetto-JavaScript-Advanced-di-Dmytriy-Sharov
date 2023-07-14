@@ -263,7 +263,7 @@
         };
       },
       45: (e, n, t) => {
-        e.exports = t.p + "city.png";
+        e.exports = t.p + "../src/image/city.png";
       },
     },
     n = {};
@@ -357,9 +357,8 @@
           const e = await fetch(
               `https://api.teleport.org/api/urban_areas/slug:${T}/scores/`
             ),
-            n = await e.json();
-          console.log(n);
-          const t = await fetch(
+            n = await e.json(),
+            t = await fetch(
               `https://api.teleport.org/api/urban_areas/slug:${T}/images/`
             ),
             r = await t.json();

@@ -30,7 +30,6 @@ const getData = async function () {
   );
 
   const dataScore = await getScore.json();
-  console.log(dataScore);
 
   const getImage = await fetch(
     `https://api.teleport.org/api/urban_areas/slug:${city}/images/`
