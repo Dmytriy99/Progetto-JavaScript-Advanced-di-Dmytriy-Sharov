@@ -23,7 +23,7 @@ module.exports = {
       title: "Teleport City",
       filename: "index.html",
       template: "src/templete.html",
-      src: "/src/IMG/favicon.png",
+      favicon: "./src/IMG/favicon.png",
     }),
   ],
 };
