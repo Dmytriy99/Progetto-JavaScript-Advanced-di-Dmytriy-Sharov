@@ -1,5 +1,5 @@
 const path = require("path");
-const WebpackFavicons = require("webpack-favicons");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: "./src/js/index.js",
   output: {
@@ -19,12 +19,9 @@ module.exports = {
     ],
   },
   plugins: [
-    new WebpackFavicons({
-      src: "/src/image/favicon.png",
-      path: "img",
-      icons: {
-        favicons: true,
-      },
+    new HtmlWebpackPlugin({
+      title: "Teleport City",
+      src: "/src/IMG/favicon.png",
     }),
   ],
 };
