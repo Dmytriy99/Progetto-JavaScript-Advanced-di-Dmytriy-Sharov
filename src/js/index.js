@@ -1,5 +1,7 @@
 import "/src/CSS/style.css";
 
+// ******DECLARATION********
+
 const photo = document.querySelector(".image");
 const summary = document.querySelector(".summary");
 const category = document.querySelector(".category");
@@ -9,6 +11,8 @@ const textScore = document.querySelector(".textScore");
 const btn = document.querySelector("button");
 let city;
 
+// *****Function for clear the information of the city*****
+
 let clearCard = function () {
   category.innerHTML = "";
   photo.style.backgroundImage = "";
@@ -16,12 +20,16 @@ let clearCard = function () {
   score.innerHTML = "";
 };
 
+// *****function to format word before search*****
+
 let formatCityName = function (nome) {
   nome = nome.toLowerCase();
   nome = nome.trim();
   nome = nome.replaceAll(" ", "-");
   return nome;
 };
+
+//  ******* FETCH API ********
 
 const getData = async function () {
   const getScore = await fetch(
@@ -35,6 +43,9 @@ const getData = async function () {
   );
 
   const dataImage = await getImage.json();
+
+  // ***** DOM MANIPULATION ******
+
   if (getScore.status != 404) {
     summary.innerHTML = `<h2><p>${dataScore.summary}</p><h2>`;
     category.innerHTML = "";
@@ -56,16 +67,23 @@ const getData = async function () {
   }
 };
 
+// *******error handling if the city is wrong or absent in the database******
+
 const errorHandler = (warningMessage) => {
   summary.innerHTML = `<p>${warningMessage}</p>`;
   return warningMessage;
 };
+
+// ********* error handling if a city is not entered ***********
+
 const errorEmpty = () => {
   if (!input.value) {
     errorHandler(`<h1>YOU MUST WRITE A CITY<h1>`);
     clearCard();
   }
 };
+
+// ********* function to initialize the search using "ENTER" *********
 
 input.addEventListener("keydown", function (enterkey) {
   if (enterkey.key === "Enter") {
@@ -74,6 +92,8 @@ input.addEventListener("keydown", function (enterkey) {
     errorEmpty();
   }
 });
+
+// ******** function to initialize the search using the "CERCA" button ********
 
 btn.addEventListener("click", function () {
   city = formatCityName(input.value);
